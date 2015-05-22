@@ -12,7 +12,15 @@ import options.Keys._
 //    * password
 //
 // Notice that only "-h2", "-mongodb" and "-postgres" are supported at the moment.
-// For adding support to other database vendors, please review class PersistenceSupport
+// For adding support to other database vendors, please review trait PersistenceSupport.
+//
+// You will have to create a database and add credentials by hand.
+// For example, in case you are going to use MongoDb:
+//
+// $ sudo apt-get install mongodb -y
+// $ mongo
+// > use alpha1
+// > db.addUser("test", "test")
 //
 //****************************************************************************************
 
