@@ -1,0 +1,10 @@
+.*~$
+target$
+^\.classpath
+^\.project
+^\.settings
+^\.idea
+^\.lib
+^\.classpath_nb
+.ipynb_checkpoints$
+.*.log$

@@ -1,0 +1,4 @@
+AMEX,American Stock Exchange,classpath:eoddata.com/symbols/AMEX.txt,null:
+NASDAQ,NASDAQ Stock Exchange,classpath:eoddata.com/symbols/NASDAQ.txt,null:
+OTCBB,OTC Bulletin Board,classpath:eoddata.com/symbols/OTCBB.txt,null:
+BVSA,Bovespa,classpath:uol.com.br/symbols/BVSA.json,classpath:uol.com.br/intraday/PETR4.SA.json

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence
+    xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+    version="1.0">
+
+    <!-- Tutorial "unit" -->
+    <persistence-unit name="code-generation">
+        <class>model.AbstractModel</class>
+        <class>model.Identifier</class>
+        <class>model.Eod</class>
+        <class>model.Intraday</class>
+        <exclude-unlisted-classes/>
+        <properties>
+            <property name="javax.jdo.PersistenceManagerFactoryClass" value="org.datanucleus.api.jdo.JDOPersistenceManagerFactory"/>
+            <property name="datanucleus.schema.autoCreateAll"         value="true"/>
+
+            <!-- ENABLE THESE FOR H2 -->
+            <property name="javax.jdo.option.ConnectionDriverName" value="org.h2.Driver"/>
+            <property name="javax.jdo.option.ConnectionURL"        value="jdbc:h2:mem:test"/>
+            <property name="javax.jdo.option.ConnectionUserName"   value="sa"/>
+            <property name="javax.jdo.option.ConnectionPassword"   value=""/>
+            <property name="javax.jdo.option.Mapping"              value="h2"/>
+
+            <!-- ENABLE THESE FOR PostgreSQL -->
+            <!--property name="javax.jdo.option.ConnectionDriverName"    value="org.postgresql.Driver"/>
+            <property name="javax.jdo.option.ConnectionURL"           value="jdbc:postgresql://host:port/database"/>
+            <property name="javax.jdo.option.ConnectionUserName"      value="sa"/>
+            <property name="javax.jdo.option.ConnectionPassword"      value=""/>
+            <property name="javax.jdo.option.RetainValues"            value="true"/>
+            <property name="javax.jdo.option.RestoreValues"           value="true"/>
+            <property name="javax.jdo.option.Optimistic"              value="true"/>
+            <property name="javax.jdo.option.NontransactionalWrite"   value="false"/>
+            <property name="javax.jdo.option.NontransactionalRead"    value="true"/>
+            <property name="javax.jdo.option.Multithreaded"           value="true"/>
+            <property name="javax.jdo.option.MsWait"                  value="5000"/>
+            <property name="javax.jdo.option.MinPool"                 value="1"/>
+            <property name="javax.jdo.option.MaxPool"                 value="80"/>
+            <property name="javax.jdo.option.IgnoreCache"             value="false"/-->
+
+            <!-- ENABLE THESE FOR MONGODB -->
+            <!--property name="javax.jdo.option.ConnectionURL" value="mongodb:/nucleus1"/>
+            <property name="javax.jdo.option.Mapping" value="mongodb"/-->
+
+            <!-- ENABLE THESE FOR HSQLDB -->
+            <!--property name="javax.jdo.option.ConnectionURL" value="jdbc:hsqldb:mem:nucleus1"/>
+            <property name="javax.jdo.option.ConnectionDriverName" value="org.hsqldb.jdbcDriver"/>
+            <property name="javax.jdo.option.ConnectionUserName" value="sa"/>
+            <property name="javax.jdo.option.ConnectionPassword" value=""/>
+            <property name="javax.jdo.option.Mapping" value="hsql"/-->
+
+            <!-- ENABLE THESE FOR MySQL/MariaDB -->
+            <!-- Change the "nucleus" to your database name, and the user/password -->
+            <!--property name="javax.jdo.option.ConnectionURL" value="jdbc:mysql://127.0.0.1/nucleus?useServerPrepStmts=false"/>
+            <property name="javax.jdo.option.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.jdo.option.ConnectionUserName" value="mysql"/>
+            <property name="javax.jdo.option.ConnectionPassword" value=""/>
+            <property name="javax.jdo.option.Mapping" value="mysql"/-->
+
+            <!-- ENABLE THESE FOR ODF -->
+            <!-- Change the "tutorial.ods" to include the path to your ODF file -->
+            <!--property name="javax.jdo.option.ConnectionURL" value="odf:file:tutorial.ods"/>
+            <property name="javax.jdo.option.Mapping" value="odf"/-->
+
+            <!-- ENABLE THESE FOR EXCEL -->
+            <!-- Change the "tutorial.xls" to include the path to your Excel file -->
+            <!--property name="javax.jdo.option.ConnectionURL" value="excel:file:tutorial.xls"/>
+            <property name="javax.jdo.option.Mapping" value="excel"/-->
+
+            <!-- ENABLE THESE FOR HBASE -->
+            <!--property name="javax.jdo.option.ConnectionURL" value="hbase:"/>
+            <property name="javax.jdo.option.Mapping" value="hbase"/-->
+
+            <!-- ENABLE THESE FOR NEO4J -->
+            <!-- Change the "testDB" to the path to your Neo4j graph DB file -->
+            <!--property name="javax.jdo.option.ConnectionURL" value="neo4j:testDB"/>
+            <property name="javax.jdo.option.Mapping" value="neo4j"/-->
+
+            <!-- ENABLE THESE FOR CASSANDRA -->
+            <!--property name="javax.jdo.option.ConnectionURL" value="cassandra:"/>
+            <property name="javax.jdo.mapping.Schema" value="schema1"/>
+            <property name="javax.jdo.option.Mapping" value="cassandra"/-->
+        </properties>
+    </persistence-unit>
+
+</persistence>

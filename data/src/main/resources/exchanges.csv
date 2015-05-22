@@ -1,0 +1,4 @@
+AMEX,American Stock Exchange,http://www.eoddata.com/Data/symbollist.aspx?e=AMEX,null:
+NASDAQ,NASDAQ Stock Exchange,http://www.eoddata.com/Data/symbollist.aspx?e=NASDAQ,null:
+OTCBB,OTC Bulletin Board,http://www.eoddata.com/Data/symbollist.aspx?e=OTCBB,null:
+BVSA,Bovespa,http://cotacoes.economia.uol.com.br/ws/asset/stock/list,http://cotacoes.economia.uol.com.br/ws/asset/%s/intraday
