@@ -7,28 +7,13 @@ import options.Versions
 import options.Keys
 
 
-// settings and tasks -------------------------------------------------------------------------------------------
+// settings and tasks ( see also: project/Keys.scala ) ----------------------------------------------------------
 
 val genjdoql      = TaskKey[Seq[File]]("genjdoql",    "DataNucleus JDOQL Entities")
 val gendbconfig   = TaskKey[Seq[File]]("gendbconfig", "Generate Database configurations for testing")
 
 
 // compilation options ------------------------------------------------------------------------------------------
-
-def javaagent(classpath: Seq[Attributed[File]],
-              model: String   = "model",
-              api: String     = "JDO",
-              pattern: String = "datanucleus-core") : Seq[String] =
-  Seq(
-    classpath
-      .map(item => item.data)
-      .map(data => data.absolutePath)
-      .filter(path => path.contains(pattern))
-      .headOption
-      .fold("") {
-      path => s"-javaagent:${path}=api=${api},${model}"
-    }
-  )
 
 val javacOpts : Seq[String] =
   Seq(
