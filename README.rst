@@ -50,7 +50,8 @@ inspired on QueryDSL.
 Why typesafe queries? The answer must be pretty clear for Scala developers: because the compiler can tell you
 at compile time whether your queries are properly defined or not, in accordance with your data model. This is
 an example extracted from the sources:
-::
+
+.. code-block:: scala
 
   def querySingleRecords(jdbcDriver: String, jdbcUrl: String, username: String, password: String): Unit = {
     import javax.jdo.JDOHelper
