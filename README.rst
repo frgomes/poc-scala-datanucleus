@@ -94,8 +94,9 @@ an example extracted from the sources:
   }
 
 
-Given that the JDOQL is database agnostic, this combination allows you the flexibility of developing using an *in-memory* database
-such as ``H2``, perform integration tests using ``MongoDB`` and perform user acceptance tests using ``PostgreSQL``.
+Given that JDOQL is database agnostic, you can develop using an *in-memory* database such as ``H2``, perform integration tests
+using ``MongoDB``, perform user acceptance tests using ``PostgreSQL`` and eventually deploy in production using ``Oracle``.
 
-Notice that ``PostgreSQL`` supports ``NoSQL``. It means that your code can be potentially able to work with both ``SQL`` and ``NoSQL``
-data using both ``MongoDB`` and ``PostgreSQL``. This allows you to select the best database for the job later, instead of in advance.
+Notice that ``PostgreSQL`` supports non-structured data (i.e: ``NoSQL``). It means that your code can be potentially able to work
+with both ``SQL`` and ``NoSQL`` data using either ``MongoDB`` or ``PostgreSQL``. This flexibility allows you to select the best
+database for the job later, instead of in advance.
